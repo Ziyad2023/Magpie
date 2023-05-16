@@ -51,6 +51,11 @@ public class Magpie5
         {
             response = "Family is everything, I'm most proud of my family.";
         }
+        
+        else if (findKeyword(statement, "name") >= 0)
+        {
+            response = "The name is Muhammad Ali, formerly known as Cassius Clay";
+        }
 
         // Responses which require transformations
         else if (findKeyword(statement, "I want to", 0) >= 0)
@@ -115,7 +120,7 @@ public class Magpie5
         }
         int psn = findKeyword (statement, "I want to", 0);
         String restOfStatement = statement.substring(psn + 9).trim();
-        return "What would it mean to " + restOfStatement + "?";
+        return "If your mind can conceive it, and your heart can believe it then you can achieve it";
     }
 
     
@@ -138,7 +143,7 @@ public class Magpie5
         }
         int psn = findKeyword (statement, "I want", 0);
         String restOfStatement = statement.substring(psn + 6).trim();
-        return "Would you really be happy if you had " + restOfStatement + "?";
+        return "Then go work for " + restOfStatement + "!";
     }
     
     /**
@@ -188,7 +193,7 @@ public class Magpie5
         int psnOfYou = findKeyword (statement, "you", psnOfI);
         
         String restOfStatement = statement.substring(psnOfI + 1, psnOfYou).trim();
-        return "Why do you " + restOfStatement + " me?";
+        return "I know you " + restOfStatement + " me. It is hard to be humble when you're as great as I am.";
     }
     
 
@@ -264,7 +269,7 @@ public class Magpie5
     }
     
     private String [] randomResponses = {"Interesting, tell me more",
-            "Hmmm.",
+            "That is amazing, but let's get to training.",
             "Do you really think so?",
             "You don't say."
     };
