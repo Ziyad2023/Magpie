@@ -62,6 +62,29 @@ public class Magpie5
         {
             response = "I am famous for being the worlds greatest Boxer in the world and entertainer. I'm fast and I'm pretty. I fly like a butterfly and sting like a bee!";
         }
+        
+        else if (findKeyword(statement, "marrige") >= 0
+            || findKeyword(statement, "married") >= 0)
+        {
+            response = "I was a player back in the day. I had 4 wives over my years";
+        }
+        
+        else if (findKeyword(statement, "children") >= 0)
+        {
+            response = "I had a total of 9 Children.";
+        }
+        
+        else if (findKeyword(statement, "are their names") >= 0
+            || findKeyword(statement, "were their name") >= 0)
+        {
+            response = "Just to name a couple, one was named Muhammad Ali Jr., Laila Ali, Rashad Ali, Hana Ali, and 5 more.";
+        }
+        
+        else if (findKeyword(statement, "born") >= 0)
+        {
+            response = "I was born in January 17, 1942 in Louisville, Kentucky.";
+        }
+
 
         // Responses which require transformations
         else if (findKeyword(statement, "I want to", 0) >= 0)
@@ -275,7 +298,7 @@ public class Magpie5
     }
     
     private String [] randomResponses = {
-            "Interesting, tell me more",
+            "Interesting, champ",
             "That is amazing, but let's get to training.",
             "Do you really think so?",
             "You don't say."
